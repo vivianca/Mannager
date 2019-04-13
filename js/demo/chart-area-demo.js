@@ -127,9 +127,230 @@ var myLineChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + number_format(tooltipItem.yLabel);
         }
       }
     }
   }
 });
+
+
+// influencer chart
+
+var influencer = document.getElementById("influencer");
+
+var influencerData = {
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    datasets: [{
+      label: "Before Campaign",
+      lineTension: 0.3,
+      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      borderColor: "rgba(78, 115, 223, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointBorderColor: "rgba(78, 115, 223, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data: [3000, 3200, 2950],
+    }, {
+      label: "After Campaign",
+      lineTension: 0.3,
+      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      borderColor: "#00FF00",
+      pointRadius: 3,
+      pointBackgroundColor: "#00FF00",
+      pointBorderColor: "#00FF00",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data: [null, null, 2950, 5000, 4500, 4200, 6500],
+    }]
+};
+
+
+var influencerChart = new Chart(influencer, {
+  type: 'line',
+  data: influencerData,
+  options: {
+    maintainAspectRatio: false,
+    layout: {
+      padding: {
+        left: 10,
+        right: 25,
+        top: 25,
+        bottom: 0
+      }
+    },
+    scales: {
+      xAxes: [{
+        time: {
+          unit: 'date'
+        },
+        scaleLabel: {
+          display: true,
+          labelString: 'Month'
+        ,},
+        gridLines: {
+          display: false,
+          drawBorder: false
+        },
+        ticks: {
+          maxTicksLimit: 7
+        }
+      }],
+      yAxes: [{
+        ticks: {
+          maxTicksLimit: 5,
+          padding: 10,
+        },
+        scaleLabel: {
+          display: true,
+          labelString: '# Adolescent Customers'
+          
+        ,},
+        gridLines: {
+          color: "rgb(234, 236, 244)",
+          zeroLineColor: "rgb(234, 236, 244)",
+          drawBorder: false,
+          borderDash: [2],
+          zeroLineBorderDash: [2]
+        }
+      }],
+    },
+    legend: {
+      display: true
+    },
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      titleMarginBottom: 10,
+      titleFontColor: '#6e707e',
+      titleFontSize: 14,
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: true,
+      intersect: true,
+      mode: 'index',
+      caretPadding: 10,
+      callbacks: {
+        label: function(tooltipItem, chart) {
+          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+          return datasetLabel + ':' + number_format(tooltipItem.yLabel);
+        }
+      }
+    }
+  }
+});
+
+
+
+// busy families chart
+
+var busy = document.getElementById("busy");
+
+var busyData = {
+  labels: ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr"],
+    datasets: [{
+      label: "Before Campaign",
+      lineTension: 0.3,
+      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      borderColor: "rgba(78, 115, 223, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointBorderColor: "rgba(78, 115, 223, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data: [500000, 503000, 498000],
+    }, {
+      label: "After Campaign",
+      lineTension: 0.3,
+      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      borderColor: "#DC143C",
+      pointRadius: 3,
+      pointBackgroundColor: "#DC143C",
+      pointBorderColor: "#DC143C",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data: [null, null, 498000, 500000, 502000, 480000, 490000],
+    }]
+};
+
+
+var busyChart = new Chart(busy, {
+  type: 'line',
+  data: busyData,
+  options: {
+    maintainAspectRatio: false,
+    layout: {
+      padding: {
+        left: 10,
+        right: 25,
+        top: 25,
+        bottom: 0
+      }
+    },
+    scales: {
+      xAxes: [{
+        time: {
+          unit: 'date'
+        },
+        scaleLabel: {
+          display: true,
+          labelString: 'Month'
+        ,},
+        gridLines: {
+          display: false,
+          drawBorder: false
+        },
+        ticks: {
+          maxTicksLimit: 7
+        }
+      }],
+      yAxes: [{
+        ticks: {
+          maxTicksLimit: 5,
+          padding: 10,
+        },
+        scaleLabel: {
+          display: true,
+          labelString: '# Adolescent Customers'
+          
+        ,},
+        gridLines: {
+          color: "rgb(234, 236, 244)",
+          zeroLineColor: "rgb(234, 236, 244)",
+          drawBorder: false,
+          borderDash: [2],
+          zeroLineBorderDash: [2]
+        }
+      }],
+    },
+    legend: {
+      display: true
+    },
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      titleMarginBottom: 10,
+      titleFontColor: '#6e707e',
+      titleFontSize: 14,
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: true,
+      intersect: true,
+      mode: 'index',
+      caretPadding: 10,
+      callbacks: {
+        label: function(tooltipItem, chart) {
+          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+          return datasetLabel + ':' + number_format(tooltipItem.yLabel);
+        }
+      }
+    }
+  }
+});
+
+
