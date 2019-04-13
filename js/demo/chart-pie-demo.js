@@ -30,7 +30,7 @@ var sex = new Chart(ctx, {
     legend: {
       display: false
     },
-    cutoutPercentage: 80,
+    cutoutPercentage: 0,
   },
 });
 
@@ -63,7 +63,7 @@ var age = new Chart(ageChart, {
     legend: {
       display: false
     },
-    cutoutPercentage: 80,
+    cutoutPercentage: 0,
   },
 });
 
@@ -95,7 +95,7 @@ var ethnicity = new Chart(ethnicityChart, {
     legend: {
       display: false
     },
-    cutoutPercentage: 80,
+    cutoutPercentage: 0,
   },
 });
 
