@@ -32,7 +32,7 @@ function browserSync(done) {
       baseDir: "./"
     },
     browser: 'chrome'
-    // port: 3000
+    port: 3000
   });
   done();
 }
