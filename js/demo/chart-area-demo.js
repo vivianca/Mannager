@@ -53,7 +53,7 @@ var data = {
       pointBorderColor: "#00FF00",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [1, 76, 110, 5, 20, 10],
+      data: [1, 76, 200, 180, 230, 50],
     }]
 };
 

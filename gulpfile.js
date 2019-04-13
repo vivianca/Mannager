@@ -31,6 +31,7 @@ function browserSync(done) {
     server: {
       baseDir: "./"
     },
+    browser: 'chrome',
     port: 3000
   });
   done();
