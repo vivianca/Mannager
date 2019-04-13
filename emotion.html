@@ -249,236 +249,53 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Real Time</h1>
+            <h1 class="h3 mb-0 text-gray-800">Emotion Analytics</h1>
           </div>
 
           <!-- Content Row -->
           <div class="row">
-
             <div>
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h5 class="m-0 font-weight-bold text-primary">Customer Demographics</h5>
+                  <h5 class="m-0 font-weight-bold text-primary">Video Stream</h5>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="row">
+		  
+                    <div class="col-xl-4 col-lg-5">
+		      <video width="900" height="600" preload autoplay>
+                    </div>
+
+                  </div>
+              </div>
+            </div>	    
+          </div>
+	    <!-- Person Container -->
+	    <div>
+	      <div class="card shadow mb-5" style="margin-left:40px">
+		                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary">Person One</h5>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
                   <div class="row">
                     <div class="col-xl-4 col-lg-5">
-                      <!-- Gender pie chart --> 
-                      <div class="chart-pie pt-4 pb-2">
-                        <canvas id="sex"></canvas>
-                      </div>
-                      <div class="mt-4 text-center small">
-                        <span class="mr-2">
-                          <i class="fas fa-circle text-success"></i> Female
-                        </span>
-                        <span class="mr-2">
-                          <i class="fas fa-circle text-primary"></i> Male
-                        </span>
-                      </div>
+		      <span>Relevant Statistics about the person</span>
                     </div>
-
-                    <!-- AGE CHART --> 
-                    <div class="col-xl-4 col-lg-5">
-                      <div class="chart-pie pt-4 pb-2">
-                        <canvas id="age"></canvas>
-                      </div>
-                      <div class="mt-4 text-center small">
-                        <span class="mr-2">
-                          <i class="fas fa-circle" style="color: thistle"></i> Toddler
-                        </span>
-                        <span class="mr-2">
-                          <i class="fas fa-circle" style="color: orchid"></i> Child
-                        </span>
-                        <span class="mr-2">
-                          <i class="fas fa-circle" style="color: mediumorchid"></i> Adolescent
-                        </span>
-                        <span class="mr-2">
-                          <i class="fas fa-circle" style="color: darkorchid"></i> Adult
-                        </span>
-                        <span class="mr-2">
-                          <i class="fas fa-circle" style="color: indigo"></i> Elderly
-                        </span>
-                      </div>
-                    </div>
-
-                    <!-- ETHNICITIES CHART --> 
-                    <div class="col-xl-4 col-lg-5">
-                      <div class="chart-pie pt-4 pb-2">
-                        <canvas id="ethnicity"></canvas>
-                      </div>
-                      <!-- <div class="mt-4 small">
-                        <div class="row" style="text-align: right">
-                          <span class="mr-2">
-                            <i class="fas fa-circle" style="color:#AFEEEE"></i> African/African-American
-                          </span>
-                          <span class="mr-2">
-                            <i class="fas fa-circle" style="color: #40E0D0"></i> Caucasian
-                          </span>
-                          </div>
-
-                          <div class="row" style="text-align: center">
-                          <span class="mr-2">
-                            <i class="fas fa-circle" style="color: #48D1CC"></i> East Asian
-                          </span>
-                        
-
-                        
-                          <span class="mr-2">
-                            <i class="fas fa-circle" style="color: #00CED1"></i> Latino/Hispanic
-                          </span>
-                          </div>
-
-                          <div class="row" style="text-align: center">
-                          <span class="mr-2">
-                            <i class="fas fa-circle" style="color: #20B2AA"></i> Native American/Pacific Islander
-                          </span>
-                          <span class="mr-2">
-                            <i class="fas fa-circle" style="color: #008B8B"></i> South Asian
-                          </span>
-                        </div>
-                        
-                      </div> -->
-                    </div>
-
                   </div>
-              </div>
-            </div>
-          </div>
+		</div>
+	      </div>
+	    </div>
         
 
             <!-- Area Chart -->
             <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h5 class="m-0 font-weight-bold text-primary">Trend Tracking</h5>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-area">
-                    <canvas id="trendTracking"></canvas>
-                  </div>
-                </div>
-              </div>
             </div>
 
-          <div class="row">
 
-
-            <div style="margin-left: 23px">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h5 class="m-0 font-weight-bold text-primary">Personalized Service</h5>
-                  <label style="text-align:right"><input type="checkbox" value="" checked> <h6 class="text-primary">Auto-Deployment Enabled!</h6></label>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <!-- Nav Item - Alerts -->
-                  <uli>
-                    <div class="row" style="margin-bottom:10px">
-                      <div>
-                        <div class="icon-circle" style="margin-right:20px; background-color: #1cc88a">
-                          <i class="fas fa-flag text-white"></i>
-                        </div>
-                      </div>
-
-                        <div>
-                          <div class="small text-gray-500">9:59 pm</div>
-                          <span class="font-weight-bold">Deploying <b>[Anna]</b> to Aisle 7 to help <b>[elderly] [female]</b> customer</span>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-bottom:10px">
-                      <div>
-                        <div class="icon-circle" style="margin-right:20px; background-color: #1cc88a">
-                          <i class="fas fa-flag text-white"></i>
-                        </div>
-                      </div>
-
-                        <div>
-                          <div class="small text-gray-500">9:20 pm</div>
-                          <span class="font-weight-bold">Deploying <b>[Alex]</b> to Aisle 11 to help <b>[young] [male]</b> customer</span>
-                        </div>
-                      </div>
-
-                    <div class="row" style="margin-bottom:10px">
-                      <div>
-                        <div class="icon-circle" style="margin-right:20px; background-color: #1cc88a">
-                          <i class="fas fa-flag text-white"></i>
-                        </div>
-                      </div>
-
-                        <div>
-                          <div class="small text-gray-500">9:17 pm</div>
-                          <span class="font-weight-bold">Deploying <b>[Angela]</b> to Aisle 11 to help <b>[child][female]</b> customer</span>
-                        </div>
-                      </div>
-
-                        <a class="dropdown-item text-center small text-gray-500" href="#">Show Older Events</a>
-                      </uli>
-                </div> <!-- close card body div -->
-              </div> <!-- close card shadow div --> 
-            </div> <!-- close card div --> 
-
-
-            <div style="margin-left:52px">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h5 class="m-0 font-weight-bold text-primary">Product Availability</h5>
-                  <label style="text-align:right"><input type="checkbox" value="" checked> <h6 class="text-primary">Auto-Deployment Enabled!</h6></label>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <!-- Nav Item - Alerts -->
-                  <uli>
-                    <div class="row" style="margin-bottom:10px">
-                      <div>
-                        <div class="icon-circle" style="margin-right:20px; background-color: #1cc88a">
-                          <i class="fas fa-flag text-white"></i>
-                        </div>
-                      </div>
-
-                        <div>
-                          <div class="small text-gray-500">9:59 pm</div>
-                          <span class="font-weight-bold">Deploying <b>[Fred]</b> to Aisle 2 to check on <b>[shampoo]</b> products</span>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-bottom:10px">
-                      <div>
-                        <div class="icon-circle" style="margin-right:20px; background-color: #1cc88a">
-                          <i class="fas fa-flag text-white"></i>
-                        </div>
-                      </div>
-
-                        <div>
-                          <div class="small text-gray-500">9:20 pm</div>
-                          <span class="font-weight-bold">Deploying <b>[Alex]</b> to Aisle 11 to help <b>[young] [male]</b> customer</span>
-                        </div>
-                      </div>
-
-                    <div class="row" style="margin-bottom:10px">
-                      <div>
-                        <div class="icon-circle" style="margin-right:20px; background-color: #1cc88a">
-                          <i class="fas fa-flag text-white"></i>
-                        </div>
-                      </div>
-
-                        <div>
-                          <div class="small text-gray-500">9:17 pm</div>
-                          <span class="font-weight-bold">Deploying <b>[Angela]</b> to Aisle 11 to help <b>[child][female]</b> customer</span>
-                        </div>
-                      </div>
-
-                        <a class="dropdown-item text-center small text-gray-500" href="#">Show Older Events</a>
-                      </uli>
-                </div> <!-- close card body div -->
-              </div> <!-- close card shadow div --> 
-            </div> <!-- close card div --> 
 
             
 
