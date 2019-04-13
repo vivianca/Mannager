@@ -2,7 +2,7 @@
   "_args": [
     [
       "@fortawesome/fontawesome-free@5.8.1",
-      "/Users/vi/repos/startbootstrap-sb-admin-2"
+      "/Users/vi/repos/Mannager"
     ]
   ],
   "_from": "@fortawesome/fontawesome-free@5.8.1",
@@ -27,7 +27,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.8.1.tgz",
   "_spec": "5.8.1",
-  "_where": "/Users/vi/repos/startbootstrap-sb-admin-2",
+  "_where": "/Users/vi/repos/Mannager",
   "author": {
     "name": "Dave Gandy",
     "email": "dave@fontawesome.com",
