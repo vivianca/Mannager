@@ -249,7 +249,7 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Emotion Analytics</h1>
+            <h1 class="h3 mb-0 text-gray-800">Shopper Analysis</h1>
           </div>
 
           <!-- Content Row -->
@@ -267,13 +267,53 @@
                     <div class="col-xl-4 col-lg-5">
 		      <img width="900" height="600" class="simulated_video" src="./img/Walton.jpeg">
 		      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 		      <script type="text/javascript">
-		       var counter = 0;
+            const start = 0;
+            const end = 171;
+            var w = 200;
+            var h = 200;
+		        var counter = start;
+            // var data = [0, 0, 0, 0];
+
+            // var ctx = document.getElementById('myChart').getContext('2d');
+            // var myBarChart = new Chart(ctx, {
+            //   type: 'bar',
+            //   data: {
+            //     labels: ['Phones', 'Jackets', 'Bottles', 'Backpacks'],
+            //     datasets: [{
+            //         label: 'Demand',
+            //         backgroundColor: 'rgb(255, 99, 132)',
+            //         borderColor: 'rgb(255, 99, 132)',
+            //         data: [0, 1, 1, 1]
+            //     }]
+            //   },
+            //   options: {}
+            // });
+
 		       setInterval(function(){
-			 counter = counter + 1;
-			 $(".simulated_video").attr("src", "https://bba05cbf.ngrok.io/output/behzad-need-help/" + ("0000" + counter).substr(-4,4) + ".jpg");
-			 console.log(("0000" + counter).substr(4,-4));
-		       }, 500);
+      			 counter = counter + 1;
+      			 if(counter == end + 1) {
+      			   counter = start;
+      			 }
+             base_url = "demo/catwalk/" + ("0000" + counter).substr(-4,4);
+      			 $(".simulated_video").attr("src", base_url + '.jpg');
+             $.get(base_url + '.json', function (data) {
+              var total_sum = Number(data.Phones) + Number(data.Jackets) + Number(data.Bottles) + Number(data.Backpacks);
+              const precision = 5;
+              var dataset = [data.Phones, data.Jackets, data.Bottles, data.Backpacks];
+
+              $("#people").text(data.people_in_scene);
+              $("#phones").text((data.Phones/total_sum).toPrecision(precision));
+              $("#jackets").text((data.Jackets/total_sum).toPrecision(precision));
+              $("#bottles").text((data.Bottles/total_sum).toPrecision(precision));
+              $("#backpacks").text((data.Backpacks/total_sum).toPrecision(precision));
+
+              
+            });
+
+		       }, 100);
 
 
 		      </script>
@@ -288,16 +328,25 @@
 	      <div class="card shadow mb-5" style="margin-left:40px">
 		                <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h5 class="m-0 font-weight-bold text-primary">Person One</h5>
+                  <h5 class="m-0 font-weight-bold text-primary">Overall Stats</h5>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                  <div class="row">
-                    <div class="col-xl-4 col-lg-5">
-		      <span>Relevant Statistics about the person</span>
-                    </div>
-                  </div>
-		</div>
+
+                    <h3>People: <span id="people">0</span></h3>
+                    <br/>
+                    <h3>Phones: <span id="phones">0</span></h3>
+                    <br/>
+                    <h3>Jackets: <span id="jackets">0</span></h3>
+                    <br/>
+                    <h3>Backpacks: <span id="backpacks">0</span></h3>
+                    <br/>
+                    <h3>Bottles: <span id="bottles">0</span></h3>
+                    
+
+                    <canvas id="myChart"></canvas>
+
+                </div>
 	      </div>
 	    </div>
         
